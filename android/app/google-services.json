@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "199949111542",
+    "project_id": "gleeworld-8fea8",
+    "storage_bucket": "gleeworld-8fea8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199949111542:android:87b8ee11b8edd36f8b5cd7",
+        "android_client_info": {
+          "package_name": "com.example.gleeworld"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199949111542-vmjnm78kuel5kadm3a3srthlgsb224os.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsfQkR3_8XmUFQ8pu45gMY9EjzAnQ35PY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199949111542-vmjnm78kuel5kadm3a3srthlgsb224os.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
