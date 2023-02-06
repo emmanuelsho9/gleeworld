@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:gleeworld/test.dart';
 import 'package:overlay_support/overlay_support.dart';
+import 'package:provider/provider.dart';
 import 'package:workmanager/workmanager.dart';
 import 'HomePage.dart';
+import 'Status/Book.dart';
+import 'Status/status.dart';
 import 'firebase_options.dart';
 
 
@@ -49,14 +52,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OverlaySupport.global(
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.orange,
+      child: MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (_) => BookModel(),
+          ),
+        ],
+        child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Flutter Demo',
+          theme: ThemeData(
+            primarySwatch: Colors.orange,
+          ),
+          home: StreamProvider<List<Book>>.value(value: BookModel().bookd,
+          initialData: [],
+          child: SProvider()),
+          //home: Test(taskName: fetchBackground,),
+          //home: const MyHomePage(title: 'Flutter Demo Home Page'),
         ),
-        home: Test(taskName: fetchBackground,),
-        //home: const MyHomePage(title: 'Flutter Demo Home Page'),
       ),
     );
   }
